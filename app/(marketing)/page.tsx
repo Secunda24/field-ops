@@ -95,11 +95,11 @@ export default function MarketingHomePage() {
                     </CardHeader>
                     <CardContent className="grid gap-3">
                       {[
-                        ["Start travel", TruckIcon],
-                        ["Upload photos", CameraIcon],
-                        ["Capture signature", SignatureIcon],
-                        ["Complete job", CheckIcon]
-                      ].map(([label, Icon]) => (
+                        { label: "Start travel", Icon: TruckIcon },
+                        { label: "Upload photos", Icon: CameraIcon },
+                        { label: "Capture signature", Icon: SignatureIcon },
+                        { label: "Complete job", Icon: CheckIcon }
+                      ].map(({ label, Icon }) => (
                         <div key={label} className="flex items-center justify-between rounded-2xl border border-border/70 px-4 py-3">
                           <div className="flex items-center gap-3">
                             <Icon className="h-4 w-4 text-brand" />

@@ -3,7 +3,7 @@ import { QuoteStatusBadge } from "@/components/fieldops/status-badges";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { requireFieldOpsRoles } from "@/lib/fieldops-auth";
 import { fieldOpsQuotes } from "@/lib/fieldops-data";
-import { formatCurrency } from "@/lib/utils";
+import { formatCurrency, formatDate } from "@/lib/utils";
 
 export default function QuotesPage() {
   requireFieldOpsRoles(["admin", "dispatcher", "manager"]);
