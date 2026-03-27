@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: fieldops-mobile
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20.20.2
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
+      - key: NEXT_PUBLIC_APP_NAME
+        value: FieldOps Mobile
+      - key: NEXT_PUBLIC_PORTAL_NAME
+        value: FieldOps Mobile
+      - key: NEXT_PUBLIC_COMPANY_NAME
+        value: Apex Service Group
+      - key: NEXT_PUBLIC_LOGO_PLACEHOLDER
+        value: FO
+      - key: NEXT_PUBLIC_ACCENT_HSL
+        value: 221 83% 53%
+      - key: NEXT_PUBLIC_SUPPORT_EMAIL
+        value: support@fieldopsmobile.com
+      - key: NEXT_PUBLIC_SITE_URL
+        value: https://fieldops-mobile.onrender.com
